@@ -1,0 +1,19 @@
+{
+  "values": [
+    {"id":"nethersdelight:strider_moss_stew","required":false},
+    {"id":"nethersdelight:strider_slice","required":false},
+    {"id":"nethersdelight:grilled_strider","required":false},
+    {"id":"nethersdelight:ground_strider","required":false},
+    {"id":"nethersdelight:plate_of_stuffed_hoglin_snout","required":false},
+    {"id":"nethersdelight:plate_of_stuffed_hoglin_ham","required":false},
+    {"id":"nethersdelight:plate_of_stuffed_hoglin_roast","required":false},
+    {"id":"nethersdelight:magma_gelatin","required":false},
+    {"id":"miners_delight:pasta_with_veggieballs","required":false},
+    {"id":"miners_delight:moss","required":false},
+    {"id":"miners_delight:glow_squid","required":false},
+    {"id":"minecraft:golden_apple","required":false},
+    {"id":"minecraft:enchanted_golden_apple","required":false},
+    {"id":"sullysmod:lanternfish","required":false},
+    {"id":"sullysmod:cooked_lanternfish","required":false}
+  ]
+}
