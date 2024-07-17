@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.eddy0820.harmoniouscompats.core.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "refmap": "harmoniouscompats.refmap.json",
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "CustomHeadLayerMixin"
+  ]
+}

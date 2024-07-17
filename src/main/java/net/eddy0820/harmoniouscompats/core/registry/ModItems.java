@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import umpaz.nethersdelight.common.utility.NDFoods;
+import vectorwing.farmersdelight.common.item.MushroomColonyItem;
 
 public class ModItems
 {
@@ -20,6 +21,9 @@ public class ModItems
 
         if(HarmoniousCompats.ModsAreLoaded(HarmoniousCompats.MINERS_DELIGHT_MOD_ID, HarmoniousCompats.NETHERS_DELIGHT_MOD_ID))
             NETHERMINERSDELIGHTITEMS.register(eventBus);
+
+        if(HarmoniousCompats.ModsAreLoaded(HarmoniousCompats.FARMERS_DELIGHT_MOD_ID, HarmoniousCompats.QUARK_MOD_ID))
+            QUARK_FARMERSDELIGHT_ITEMS.register(eventBus);
     }
 
     public static final DeferredRegister<Item> QUARKMINERSDELIGHTITEMS =
@@ -45,4 +49,11 @@ public class ModItems
                     .food(MDFoodValues.cupFoodProperties(NDFoods.STRIDER_MOSS_STEW))
                     .craftRemainder(MDItems.COPPER_CUP.get())
                     .stacksTo(16), !NDFoods.STRIDER_MOSS_STEW.getEffects().isEmpty()));
+
+    public static final DeferredRegister<Item> QUARK_FARMERSDELIGHT_ITEMS =
+            DeferredRegister.create(ForgeRegistries.ITEMS, HarmoniousCompats.MOD_ID);
+
+    public static final RegistryObject<Item> GLOW_SHROOM_COLONY = QUARK_FARMERSDELIGHT_ITEMS.register("glow_shroom_colony",
+            () -> new MushroomColonyItem(ModBlocks.GLOW_SHROOM_COLONY.get(), new Item.Properties()));
+
 }

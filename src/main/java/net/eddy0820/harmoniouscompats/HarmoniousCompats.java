@@ -1,6 +1,7 @@
 package net.eddy0820.harmoniouscompats;
 
 import com.mojang.logging.LogUtils;
+import net.eddy0820.harmoniouscompats.core.registry.ModBlocks;
 import net.eddy0820.harmoniouscompats.core.registry.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -23,12 +24,15 @@ public class HarmoniousCompats {
     public static final String MINERS_DELIGHT_MOD_ID = "miners_delight";
     public static final String QUARK_DELIGHT_MOD_ID = "quarkdelight";
     public static final String NETHERS_DELIGHT_MOD_ID = "nethersdelight";
+    public static final String QUARK_MOD_ID = "quark";
+    public static final String FARMERS_DELIGHT_MOD_ID = "farmersdelight";
 
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public HarmoniousCompats() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -55,7 +59,13 @@ public class HarmoniousCompats {
             {
                 event.accept(ModItems.STRIDER_MOSS_STEW_CUP);
             }
-
+        }
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
+        {
+            if(ModsAreLoaded(FARMERS_DELIGHT_MOD_ID, QUARK_MOD_ID))
+            {
+                event.accept(ModItems.GLOW_SHROOM_COLONY);
+            }
         }
     }
 
