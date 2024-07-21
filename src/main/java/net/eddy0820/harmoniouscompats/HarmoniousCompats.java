@@ -1,6 +1,7 @@
 package net.eddy0820.harmoniouscompats;
 
 import com.mojang.logging.LogUtils;
+import net.eddy0820.harmoniouscompats.common.CommonSetup;
 import net.eddy0820.harmoniouscompats.core.registry.ModBlocks;
 import net.eddy0820.harmoniouscompats.core.registry.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -32,6 +33,7 @@ public class HarmoniousCompats {
     public HarmoniousCompats() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        modEventBus.addListener(CommonSetup::init);
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
 

@@ -5,6 +5,7 @@
   "minVersion": "0.8",
   "refmap": "harmoniouscompats.refmap.json",
   "mixins": [
+    "RichSoilBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

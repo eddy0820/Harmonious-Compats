@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "harmoniouscompats:glow_shroom_colony"
+    }
+  ],
+  "result": [
+    {
+      "count": 5,
+      "item": "quark:glow_shroom"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

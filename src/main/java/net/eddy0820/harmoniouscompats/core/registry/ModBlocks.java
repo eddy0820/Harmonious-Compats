@@ -1,6 +1,7 @@
 package net.eddy0820.harmoniouscompats.core.registry;
 
 import net.eddy0820.harmoniouscompats.HarmoniousCompats;
+import net.eddy0820.harmoniouscompats.common.blocks.GlowShroomColonyBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +23,6 @@ public class ModBlocks
             DeferredRegister.create(ForgeRegistries.BLOCKS, HarmoniousCompats.MOD_ID);
 
     public static final RegistryObject<Block> GLOW_SHROOM_COLONY = QUARK_FARMERSDELIGHT_BLOCKS.register("glow_shroom_colony",
-            () -> new MushroomColonyBlock(BlockBehaviour.Properties.copy(GlimmeringWealdModule.glow_shroom_block), () -> GlimmeringWealdModule.glow_shroom.asItem()));
+            () -> new GlowShroomColonyBlock(BlockBehaviour.Properties.copy(GlimmeringWealdModule.glow_shroom_block).randomTicks().lightLevel((s) -> {return 10;}), () -> GlimmeringWealdModule.glow_shroom.asItem()));
 
 }
