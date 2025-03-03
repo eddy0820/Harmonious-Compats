@@ -34,8 +34,20 @@ public class TooltipEvents
             return;
 
         List<Component> tooltip = event.getToolTip();
-        for (Pair<MobEffectInstance, Float> pair : foodProperties.getEffects())
+
+        int insertIndex= 1;
+        for(int i = 0; i < tooltip.size(); i++)
         {
+            if(tooltip.get(i).getString().isEmpty())
+            {
+                insertIndex = i;
+                break;
+            }
+        }
+
+        for(int i = 0; i < foodProperties.getEffects().size(); i++)
+        {
+            Pair<MobEffectInstance, Float> pair = foodProperties.getEffects().get(i);
             MobEffectInstance effect = pair.getFirst();
 
             if(effect.getEffect().getCategory() == MobEffectCategory.HARMFUL)
@@ -45,7 +57,8 @@ public class TooltipEvents
             if (effect.getDuration() > 20) {
                 effectText = Component.translatable("potion.withDuration", effectText, MobEffectUtil.formatDuration(effect, 1));
             }
-            tooltip.add(effectText.withStyle(effect.getEffect().getCategory().getTooltipFormatting()));
+
+            tooltip.add(insertIndex + i, effectText.withStyle(effect.getEffect().getCategory().getTooltipFormatting()));
         }
     }
 }
