@@ -6,7 +6,8 @@
   "refmap": "harmoniouscompats.refmap.json",
   "mixins": [
     "RichSoilBlockMixin",
-    "CupConversionReloadListenerMixin"
+    "CupConversionReloadListenerMixin",
+    "EnclosureFeatureMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -28,6 +28,7 @@ public class HarmoniousCompats {
     public static final String QUARK_MOD_ID = "quark";
     public static final String FARMERS_DELIGHT_MOD_ID = "farmersdelight";
     public static final String NEAPOLITAN_MOD_ID = "neapolitan";
+    public static final String SAVAGE_AND_RAVAGE_MOD_ID = "savage_and_ravage";
 
     public static final Logger LOGGER = LogUtils.getLogger();
 
