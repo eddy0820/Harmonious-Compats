@@ -3,6 +3,7 @@ package net.eddy0820.harmoniouscompats.core.registry;
 import com.sammy.minersdelight.content.item.CopperCupFoodItem;
 import com.sammy.minersdelight.setup.MDFoodValues;
 import com.sammy.minersdelight.setup.MDItems;
+import com.teamabnormals.neapolitan.core.registry.NeapolitanItems;
 import net.eddy0820.harmoniouscompats.HarmoniousCompats;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;

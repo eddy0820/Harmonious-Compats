@@ -27,6 +27,7 @@ public class HarmoniousCompats {
     public static final String NETHERS_DELIGHT_MOD_ID = "nethersdelight";
     public static final String QUARK_MOD_ID = "quark";
     public static final String FARMERS_DELIGHT_MOD_ID = "farmersdelight";
+    public static final String NEAPOLITAN_MOD_ID = "neapolitan";
 
     public static final Logger LOGGER = LogUtils.getLogger();
 
@@ -60,6 +61,12 @@ public class HarmoniousCompats {
             if(ModsAreLoaded(MINERS_DELIGHT_MOD_ID, NETHERS_DELIGHT_MOD_ID))
             {
                 event.accept(ModItems.STRIDER_MOSS_STEW_CUP);
+            }
+
+            if(ModsAreLoaded(MINERS_DELIGHT_MOD_ID, NEAPOLITAN_MOD_ID))
+            {
+                event.accept(ModItems.ADZUKI_CURRY_CUP);
+                event.accept(ModItems.ADZUKI_STEW_CUP);
             }
         }
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)

@@ -11,6 +11,14 @@
     {
       "bowl": "quarkdelight:cavern_explorer_stew",
       "cup": "harmoniouscompats:cavern_explorer_stew_cup"
+    },
+    {
+      "bowl": "neapolitan:adzuki_curry",
+      "cup": "harmoniouscompats:adzuki_curry_cup"
+    },
+    {
+      "bowl": "neapolitan:adzuki_stew",
+      "cup": "harmoniouscompats:adzuki_stew_cup"
     }
   ]
 }
